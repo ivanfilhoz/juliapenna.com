@@ -1,0 +1,13 @@
+{
+  "name": "juliapenna-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}

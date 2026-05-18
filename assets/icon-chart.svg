@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="bar-chart-2-line">
+<path id="Vector" d="M4.41667 28.7083H17.6667V46.375H4.41667V28.7083ZM35.3333 17.6667H48.5833V46.375H35.3333V17.6667ZM19.875 6.625H33.125V46.375H19.875V6.625ZM8.83333 33.125V41.9583H13.25V33.125H8.83333ZM24.2917 11.0417V41.9583H28.7083V11.0417H24.2917ZM39.75 22.0833V41.9583H44.1667V22.0833H39.75Z" fill="url(#paint0_linear_0_7)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_7" x1="26.5" y1="6.625" x2="26.5" y2="46.375" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF5E97"/>
+<stop offset="1" stop-color="#F6904F"/>
+</linearGradient>
+</defs>
+</svg>

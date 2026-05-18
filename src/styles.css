@@ -1,0 +1,743 @@
+:root {
+  color-scheme: light;
+  --page: #f2f2f2;
+  --ink: rgba(0, 0, 0, 0.66);
+  --ink-strong: rgba(0, 0, 0, 0.78);
+  --white-glass: rgba(255, 255, 255, 0.24);
+  --line: rgba(255, 255, 255, 0.55);
+  --pink: #ff5e97;
+  --orange: #f6904f;
+  --gradient: linear-gradient(90deg, var(--pink), var(--orange));
+  --container: min(100% - 12rem, 1184px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--page);
+  color: var(--ink);
+  font-family: Jost, Inter, system-ui, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-pad {
+  position: relative;
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.orb {
+  position: absolute;
+  z-index: -1;
+  width: clamp(20rem, 45vw, 46rem);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 94, 151, 0.78), transparent 30%),
+    radial-gradient(circle at 64% 60%, rgba(246, 144, 79, 0.72), transparent 32%);
+  filter: blur(34px);
+  opacity: 0.8;
+  transform: rotate(-22deg);
+}
+
+.hero {
+  min-height: min(46rem, 82vh);
+  display: grid;
+  align-items: center;
+}
+
+.hero-title-lock {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.hero h1 {
+  margin: 0;
+  background: linear-gradient(180deg, #111 0%, #666 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(5.2rem, 21vw, 18.75rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: 0;
+}
+
+.hero-o {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(180deg, #111 0%, #666 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-seal {
+  pointer-events: none;
+  width: 110%;
+  max-width: none;
+  height: auto;
+  position: absolute;
+  top: 58%;
+  left: 7%;
+}
+
+.orb-hero {
+  right: -11rem;
+  top: 4rem;
+}
+
+.intro {
+  padding-block: 3rem 9rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+}
+
+.intro h2,
+.skills h2,
+.project-copy h2,
+.project-copy h3,
+.profile-card h2 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: clamp(2.6rem, 7vw, 6.25rem);
+  line-height: 1;
+}
+
+.intro-copy {
+  max-width: 49rem;
+  margin: 1.2rem 0 5.8rem;
+  font-size: clamp(1rem, 1.7vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.orb-intro-a {
+  left: -23rem;
+  top: 22rem;
+}
+
+.orb-intro-b {
+  right: -22rem;
+  bottom: -11rem;
+}
+
+.stats-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 3vw, 2.75rem);
+}
+
+.glass-card {
+  min-height: 8.4rem;
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  background: var(--white-glass);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(255, 94, 151, 0.06);
+}
+
+.stat-card {
+  position: relative;
+  padding: 1.25rem 1.35rem;
+}
+
+.stat-card img,
+.skill-card img {
+  width: 3.35rem;
+  height: 3.35rem;
+  object-fit: contain;
+}
+
+.stat-card strong {
+  position: absolute;
+  top: 1rem;
+  right: 1.35rem;
+  color: var(--ink-strong);
+  font-size: 1.4rem;
+}
+
+.stat-card h3,
+.skill-card h3 {
+  margin: 1rem 0 0.25rem;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.skills {
+  padding-block: 5rem 10rem;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: clamp(2rem, 4vw, 2.1rem);
+}
+
+.tool-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.8rem, 5vw, 3.5rem);
+  margin: 1.8rem 0 8rem;
+}
+
+.tool-row img,
+.tool-icon {
+  width: clamp(4.1rem, 8vw, 6.75rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.1));
+}
+
+.tool-icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.tool-figma {
+  background-image: url("../assets/figma-logo.png");
+  background-position: 0 center;
+  background-size: 220% auto;
+}
+
+.skill-card {
+  min-height: 8.4rem;
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.orb-skills-a {
+  right: -16rem;
+  top: 5rem;
+}
+
+.orb-skills-b {
+  left: -19rem;
+  bottom: -9rem;
+}
+
+.project {
+  padding-block: 3rem 8rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.project-gallery figure {
+  height: clamp(15rem, 27vw, 24.25rem);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #fff;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-copy {
+  max-width: 40rem;
+}
+
+.project-copy h2,
+.project-copy h3 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(2rem, 4vw, 2.1rem);
+}
+
+.project-copy p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.68);
+  font-size: clamp(1.05rem, 2vw, 1.38rem);
+  line-height: 1.45;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.45rem;
+}
+
+.tags span,
+.cta {
+  min-height: 1.5rem;
+  border-radius: 12px;
+  padding: 0.25rem 1rem;
+  background: rgba(255, 255, 255, 0.28);
+  color: rgba(0, 0, 0, 0.65);
+  font-family: Manrope, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.browser-window {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  aspect-ratio: 1183 / 692;
+  border-radius: 10px 10px 4px 4px;
+  background: #fff;
+  box-shadow: 0 28px 90px rgba(255, 94, 151, 0.16);
+}
+
+.browser-chrome {
+  display: flex;
+  gap: 0.38rem;
+  align-items: center;
+  height: 1.75rem;
+  padding-inline: 1rem;
+}
+
+.browser-chrome span {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 99px;
+}
+
+.browser-chrome span:nth-child(1) {
+  background: #ff5f56;
+}
+
+.browser-chrome span:nth-child(2) {
+  background: #ffbd2e;
+}
+
+.browser-chrome span:nth-child(3) {
+  background: #27c93f;
+}
+
+.browser-window img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-carousel {
+  --carousel-pad: max(1.5rem, calc((100vw - 1184px) / 2));
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  padding-inline: var(--carousel-pad);
+}
+
+.carousel-header h2 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-size: clamp(2rem, 4vw, 2.1rem);
+  line-height: 1;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.carousel-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.38);
+  color: rgba(0, 0, 0, 0.62);
+  cursor: pointer;
+  font: 400 2rem / 1 Jost, sans-serif;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.68);
+  transform: translateY(-1px);
+}
+
+.carousel-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding-inline: var(--carousel-pad);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.carousel-slide .project-copy {
+  margin-top: 3rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2.2rem;
+  padding-inline: var(--carousel-pad);
+}
+
+.carousel-dots button {
+  width: 0.55rem;
+  height: 0.55rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-dots button[aria-current] {
+  width: 1.8rem;
+  background: var(--gradient);
+}
+
+.orb-devialize {
+  right: -21rem;
+  bottom: -9rem;
+}
+
+.profile-section {
+  min-height: 55rem;
+  display: grid;
+  place-items: center;
+  padding-block: 6rem 9rem;
+}
+
+.profile-card {
+  width: min(100%, 47.3rem);
+  min-height: 50rem;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 90px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(24px);
+  text-align: center;
+  box-shadow: 0 36px 100px rgba(246, 144, 79, 0.11);
+}
+
+.profile-photo {
+  width: 15.75rem;
+  height: 15.75rem;
+  margin: 7.6rem auto 2rem;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+.profile-card h2 {
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+.profile-card p {
+  max-width: 37rem;
+  margin: 7.6rem auto 1rem;
+  background: var(--gradient);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20rem;
+  background: var(--gradient);
+  color: #fff;
+}
+
+.orb-profile-a {
+  left: -18rem;
+  bottom: 3rem;
+}
+
+.orb-profile-b {
+  right: -21rem;
+  top: 5rem;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 24.5rem;
+  padding: 5rem max(7vw, 1.5rem);
+  background: linear-gradient(90deg, rgba(255, 94, 151, 0.74), rgba(246, 144, 79, 0.62));
+  color: #fff;
+}
+
+.site-footer h2,
+.site-footer p {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+
+.site-footer h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.site-footer address {
+  display: grid;
+  gap: 0.2rem;
+  margin: 0.2rem 0 1.25rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.social-links img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-logo {
+  width: min(11rem, 28vw);
+  opacity: 0.86;
+}
+
+@media (max-width: 980px) {
+  :root {
+    --container: min(100% - 3rem, 44rem);
+  }
+
+  .hero {
+    min-height: 34rem;
+  }
+
+  .intro {
+    padding-block: 1rem 5.5rem;
+  }
+
+  .intro-copy {
+    margin-bottom: 3rem;
+  }
+
+  .stats-grid,
+  .skills-grid,
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card,
+  .skill-card {
+    min-height: 7.8rem;
+  }
+
+  .skills {
+    padding-block: 3rem 5.5rem;
+  }
+
+  .tool-row {
+    margin-bottom: 4rem;
+  }
+
+  .project {
+    padding-block: 2rem 5.5rem;
+  }
+
+  .project-gallery {
+    gap: 1rem;
+  }
+
+  .project-gallery figure {
+    height: auto;
+    aspect-ratio: 1.18;
+  }
+
+  .browser-window {
+    border-radius: 10px;
+  }
+
+  .carousel-header {
+    align-items: flex-end;
+  }
+
+  .profile-section {
+    min-height: auto;
+    padding-block: 3rem 5rem;
+  }
+
+  .profile-card {
+    min-height: auto;
+    border-radius: 44px;
+    padding: 4rem 1.5rem;
+  }
+
+  .profile-photo {
+    width: 11rem;
+    height: 11rem;
+    margin: 0 auto 1.6rem;
+  }
+
+  .profile-card p {
+    margin: 3rem auto 1.5rem;
+    text-align: center;
+  }
+
+  .cta {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --container: min(100% - 1.5rem, 34rem);
+  }
+
+  .orb {
+    width: 22rem;
+    filter: blur(28px);
+    opacity: 0.62;
+  }
+
+  .hero {
+    min-height: 21rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(4.2rem, 24vw, 6.6rem);
+  }
+
+  .eyebrow {
+    font-size: 1.15rem;
+  }
+
+  .intro h2 {
+    font-size: clamp(3rem, 16vw, 4.5rem);
+  }
+
+  .intro-copy {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .stat-card h3,
+  .skill-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .tool-row {
+    gap: 1.1rem;
+  }
+
+  .project-gallery figure,
+  .glass-card {
+    border-radius: 18px;
+  }
+
+  .carousel-header {
+    display: grid;
+  }
+
+  .carousel-controls {
+    justify-self: end;
+  }
+
+  .carousel-btn {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.7rem;
+  }
+
+  .tags span,
+  .cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-card {
+    border-radius: 32px;
+  }
+
+  .site-footer {
+    display: grid;
+    gap: 3rem;
+    min-height: 20rem;
+  }
+
+  .footer-logo {
+    justify-self: end;
+  }
+}
