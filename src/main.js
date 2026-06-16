@@ -54,6 +54,14 @@ if (graphicProjects) {
   const panels = Array.from(graphicProjects.querySelectorAll("[data-project-panel]"));
   const visuals = Array.from(graphicProjects.querySelectorAll("[data-project-visual]"));
   const gallery = graphicProjects.querySelector("[data-project-gallery]");
+  const visualImages = visuals.map((visual) => visual.querySelector("img")).filter(Boolean);
+
+  visualImages.forEach((image) => {
+    const preloader = new Image();
+    preloader.decoding = "async";
+    preloader.src = image.currentSrc || image.src;
+    preloader.decode?.().catch(() => {});
+  });
 
   const setGraphicProject = (project) => {
     tabs.forEach((tab) => {
