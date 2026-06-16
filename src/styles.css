@@ -180,6 +180,7 @@ a {
 
 .intro h2,
 .skills h2,
+.project-heading h2,
 .project-copy h2,
 .project-copy h3,
 .profile-card h2 {
@@ -296,7 +297,7 @@ a {
 }
 
 .tool-figma {
-  background-image: url("../assets/figma-logo.png");
+  background-image: url("../assets/figma-logo.webp");
   background-position: 0 center;
   background-size: 220% auto;
 }
@@ -327,9 +328,58 @@ a {
   padding-block: 3rem 8rem;
 }
 
+.project-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.1rem);
+}
+
+.project-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: flex-end;
+}
+
+.project-tab {
+  min-height: 2.35rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  background: rgba(255, 255, 255, 0.28);
+  color: rgba(0, 0, 0, 0.62);
+  cursor: pointer;
+  font-family: Manrope, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-tab:hover,
+.project-tab:focus-visible {
+  background: rgba(255, 255, 255, 0.65);
+  transform: translateY(-1px);
+}
+
+.project-tab[aria-selected="true"] {
+  border-color: transparent;
+  background: var(--gradient);
+  color: #fff;
+}
+
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(0, min(100%, 38rem));
   gap: 1.5rem;
   margin-bottom: 4rem;
 }
@@ -565,9 +615,13 @@ a {
 
 .profile-card h2 {
   background: var(--gradient);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
   font-size: clamp(2rem, 4vw, 2.5rem);
+  line-height: 1.16;
+  padding-bottom: 0.08em;
 }
 
 .profile-card p {
@@ -693,6 +747,15 @@ a {
 
   .project-gallery {
     gap: 1rem;
+  }
+
+  .project-heading {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .project-tabs {
+    justify-content: flex-start;
   }
 
   .project-gallery figure {

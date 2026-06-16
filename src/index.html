@@ -7,7 +7,30 @@
       name="description"
       content="Portfólio de Júlia Penna, UX/UI Designer com foco em produtos digitais, identidade visual e experiências humanas."
     />
+    <link rel="canonical" href="https://juliapenna.com/" />
+    <meta name="theme-color" content="#f2f2f2" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://juliapenna.com/" />
+    <meta property="og:title" content="Júlia Penna | UX/UI Designer" />
+    <meta
+      property="og:description"
+      content="Portfólio de Júlia Penna, UX/UI Designer com foco em produtos digitais, identidade visual e experiências humanas."
+    />
+    <meta property="og:image" content="https://juliapenna.com/og-image.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Portfólio de Júlia Penna, UX/UI Designer" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Júlia Penna | UX/UI Designer" />
+    <meta
+      name="twitter:description"
+      content="Portfólio de Júlia Penna, UX/UI Designer com foco em produtos digitais, identidade visual e experiências humanas."
+    />
+    <meta name="twitter:image" content="https://juliapenna.com/og-image.webp" />
     <title>Júlia Penna | Portfólio</title>
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -74,8 +97,8 @@
         <h2 id="skills-title">Habilidades</h2>
 
         <div class="tool-row" aria-label="Ferramentas">
-          <img src="../assets/photoshop-logo.png" alt="Adobe Photoshop" />
-          <img src="../assets/illustrator-logo.png" alt="Adobe Illustrator" />
+          <img src="../assets/photoshop-logo.webp" alt="Adobe Photoshop" />
+          <img src="../assets/illustrator-logo.webp" alt="Adobe Illustrator" />
           <span class="tool-icon tool-figma" role="img" aria-label="Figma"></span>
         </div>
 
@@ -95,18 +118,137 @@
         </div>
       </section>
 
-      <section class="project section-pad project-costa" aria-labelledby="costa-title">
-        <div class="project-gallery">
-          <figure><img src="../assets/project-costa-1.png" alt="Aplicação da marca Costa em peça azul" /></figure>
-          <figure><img src="../assets/project-costa-2.png" alt="Marca Costa Construção e Manutenção" /></figure>
-          <figure><img src="../assets/project-costa-3.png" alt="Aplicação de marca em fundo claro" /></figure>
-          <figure><img src="../assets/project-costa-4.png" alt="Mockup de ícone da marca Costa" /></figure>
-          <figure><img src="../assets/project-costa-5.png" alt="Identidade visual Júlia em fundo roxo" /></figure>
-          <figure><img src="../assets/project-costa-6.png" alt="Composição de identidade visual EVA" /></figure>
+      <section class="project section-pad project-graphics" aria-labelledby="graphics-title" data-graphic-projects>
+        <div class="project-heading">
+          <h2 id="graphics-title">Projetos gráficos</h2>
+          <div class="project-tabs" role="tablist" aria-label="Selecionar projeto gráfico">
+            <button
+              id="graphic-tab-costa"
+              class="project-tab"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="graphic-panel-costa"
+              data-project-tab="costa"
+            >
+              Costa
+            </button>
+            <button
+              id="graphic-tab-devialize"
+              class="project-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="graphic-panel-devialize"
+              data-project-tab="devialize"
+              tabindex="-1"
+            >
+              Devialize
+            </button>
+            <button
+              id="graphic-tab-guardize"
+              class="project-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="graphic-panel-guardize"
+              data-project-tab="guardize"
+              tabindex="-1"
+            >
+              Guardize
+            </button>
+            <button
+              id="graphic-tab-recibos"
+              class="project-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="graphic-panel-recibos"
+              data-project-tab="recibos"
+              tabindex="-1"
+            >
+              Recibos
+            </button>
+            <button
+              id="graphic-tab-julia"
+              class="project-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="graphic-panel-julia"
+              data-project-tab="julia"
+              tabindex="-1"
+            >
+              Julia
+            </button>
+            <button
+              id="graphic-tab-eva"
+              class="project-tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="graphic-panel-eva"
+              data-project-tab="eva"
+              tabindex="-1"
+            >
+              EVA
+            </button>
+          </div>
         </div>
 
-        <div class="project-copy">
-          <h2 id="costa-title">Costa Construção e Manutenção</h2>
+        <div class="project-gallery" data-project-gallery data-active-project="costa">
+          <figure data-project-visual="costa">
+            <img
+              src="../assets/project-costa-logo.webp"
+              alt="Marca Costa Construção e Manutenção"
+              loading="lazy"
+            />
+          </figure>
+          <figure data-project-visual="devialize" hidden>
+            <img
+              src="../assets/project-devialize-logo.webp"
+              alt="Marca Devialize em preto sobre fundo claro"
+              loading="lazy"
+            />
+          </figure>
+          <figure data-project-visual="guardize" hidden>
+            <img
+              src="../assets/project-guardize-logo.webp"
+              alt="Marca Guardize em azul sobre fundo claro"
+              loading="lazy"
+            />
+          </figure>
+          <figure data-project-visual="recibos" hidden>
+            <img
+              src="../assets/project-recibos-logo.webp"
+              alt="Logo do app Recibos com cartões cinza e amarelo"
+              loading="lazy"
+            />
+          </figure>
+          <figure data-project-visual="julia" hidden>
+            <img
+              src="../assets/project-julia-agent.webp"
+              alt="Identidade visual da assistente pessoal de IA Julia em fundo roxo"
+              loading="lazy"
+            />
+          </figure>
+          <figure data-project-visual="eva" hidden>
+            <img
+              src="../assets/project-eva-cosmeticos.webp"
+              alt="Identidade visual da linha de cosméticos EVA em fundo claro"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+
+        <div
+          id="graphic-panel-costa"
+          class="project-copy"
+          role="tabpanel"
+          aria-labelledby="graphic-tab-costa"
+          data-project-panel="costa"
+        >
+          <h3>Costa Construção e Manutenção</h3>
           <p>
             Desenvolvimento de identidade visual para a Costa, uma empresa LTDA focada em reformas
             e manutenções prediais e corporativas. O desafio era criar uma marca que unisse a força
@@ -114,8 +256,113 @@
           </p>
           <div class="tags" aria-label="Categorias do projeto Costa">
             <span>Identidade visual</span>
-            <span>Identidade de inteligência artificial</span>
+            <span>Construção civil</span>
+            <span>Aplicações de marca</span>
+          </div>
+        </div>
+
+        <div
+          id="graphic-panel-devialize"
+          class="project-copy"
+          role="tabpanel"
+          aria-labelledby="graphic-tab-devialize"
+          data-project-panel="devialize"
+          hidden
+        >
+          <h3>Devialize</h3>
+          <p>
+            Identidade visual para a Devialize, uma empresa de tecnologia e software house focada
+            em soluções digitais sob medida, automações, aplicativos, sistemas integrados e nuvem.
+            A marca precisava comunicar tecnologia B2B com clareza, precisão e presença global.
+          </p>
+          <div class="tags" aria-label="Categorias do projeto Devialize">
+            <span>Software house</span>
+            <span>Tecnologia B2B</span>
+            <span>Sistemas sob medida</span>
+          </div>
+        </div>
+
+        <div
+          id="graphic-panel-guardize"
+          class="project-copy"
+          role="tabpanel"
+          aria-labelledby="graphic-tab-guardize"
+          data-project-panel="guardize"
+          hidden
+        >
+          <h3>Guardize</h3>
+          <p>
+            Criação de identidade para o Guardize, serviço de monitoramento NVR em nuvem
+            desenvolvido pela Devialize. A linguagem visual apoia uma solução de vigilância com IA,
+            alertas em tempo real, portal web e operação por assinatura.
+          </p>
+          <div class="tags" aria-label="Categorias do projeto Guardize">
+            <span>NVR em nuvem</span>
+            <span>Monitoramento</span>
+            <span>IA e alertas</span>
+          </div>
+        </div>
+
+        <div
+          id="graphic-panel-recibos"
+          class="project-copy"
+          role="tabpanel"
+          aria-labelledby="graphic-tab-recibos"
+          data-project-panel="recibos"
+          hidden
+        >
+          <h3>Recibos</h3>
+          <p>
+            Identidade para Recibos, um scanner de recibos 100% local com Apple Intelligence,
+            também desenvolvido pela Devialize. O app extrai loja, data, total, categoria e itens,
+            mantendo busca, insights e sincronização iCloud com foco em privacidade.
+          </p>
+          <div class="tags" aria-label="Categorias do projeto Recibos">
+            <span>App iOS</span>
+            <span>Apple Intelligence</span>
+            <span>Privacidade local</span>
+          </div>
+        </div>
+
+        <div
+          id="graphic-panel-julia"
+          class="project-copy"
+          role="tabpanel"
+          aria-labelledby="graphic-tab-julia"
+          data-project-panel="julia"
+          hidden
+        >
+          <h3>Julia</h3>
+          <p>
+            Criação de identidade visual para Julia, uma assistente pessoal de IA pensada para organizar
+            rotinas, apoiar decisões e tornar interações digitais mais próximas. A direção visual
+            traduz tecnologia, autonomia e acolhimento sem perder clareza de uso.
+          </p>
+          <div class="tags" aria-label="Categorias do projeto Julia">
+            <span>Identidade de IA</span>
+            <span>Assistente pessoal</span>
             <span>Ícone de aplicativo</span>
+          </div>
+        </div>
+
+        <div
+          id="graphic-panel-eva"
+          class="project-copy"
+          role="tabpanel"
+          aria-labelledby="graphic-tab-eva"
+          data-project-panel="eva"
+          hidden
+        >
+          <h3>EVA</h3>
+          <p>
+            Desenvolvimento de identidade para EVA, uma linha de cosméticos com linguagem leve,
+            delicada e sensorial. O projeto explora minimalismo, bem-estar e cuidado pessoal para
+            construir uma presença visual elegante e memorável.
+          </p>
+          <div class="tags" aria-label="Categorias do projeto EVA">
+            <span>Cosméticos</span>
+            <span>Identidade visual</span>
+            <span>Direção visual</span>
           </div>
         </div>
       </section>
@@ -139,19 +386,19 @@
             <article class="carousel-slide" aria-labelledby="devialize-title">
               <div class="browser-window" aria-label="Mockup do projeto Devialize">
                 <div class="browser-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
-                <img src="../assets/devialize-browser.png" alt="Website Devialize com chamada sobre design" />
+                <img src="../assets/devialize-browser.webp" alt="Website Devialize com chamada sobre design" />
               </div>
               <div class="project-copy">
                 <h3 id="devialize-title">Devialize</h3>
                 <p>
-                  Desenvolvimento estratégico da marca e presença digital, para a Devialize. O projeto
-                  utiliza o design de interface (UI) e a experiência do usuário (UX) para posicionar a
-                  marca como referência em inovação e tecnologia personalizada no mercado global.
+                  Presença digital para a Devialize, uma empresa de tecnologia e software house que
+                  cria soluções sob medida, aplicativos, automações, sistemas integrados e projetos em
+                  nuvem para negócios que precisam transformar operações em produto digital.
                 </p>
                 <div class="tags" aria-label="Categorias do projeto Devialize">
-                  <span>Experiência UX</span>
-                  <span>Interface UI</span>
-                  <span>Identidade visual</span>
+                  <span>Software house</span>
+                  <span>Apps e sistemas</span>
+                  <span>Automação</span>
                 </div>
               </div>
             </article>
@@ -159,20 +406,19 @@
             <article class="carousel-slide" aria-labelledby="guardize-title">
               <div class="browser-window" aria-label="Mockup do projeto Guardize">
                 <div class="browser-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
-                <img src="../assets/guardize-browser.png" alt="Website Guardize com interface de segurança" />
+                <img src="../assets/guardize-browser.webp" alt="Website Guardize com interface de segurança" />
               </div>
               <div class="project-copy">
                 <h3 id="guardize-title">Guardize</h3>
                 <p>
-                  Desenvolvimento estratégico da marca e presença digital, integrando design gráfico de
-                  alta fidelidade com tecnologias de interface imersivas. O objetivo foi criar uma
-                  experiência que não apenas informe, mas demonstre a tecnologia da empresa na prática.
+                  Interface e presença digital para o Guardize, serviço de monitoramento NVR em nuvem
+                  desenvolvido pela Devialize. A solução combina portal web, vigilância com IA, alertas
+                  em tempo real e uma operação por assinatura com hardware, software e manutenção.
                 </p>
                 <div class="tags" aria-label="Categorias do projeto Guardize">
-                  <span>Experiência UX</span>
-                  <span>Interface UI</span>
-                  <span>Identidade visual</span>
-                  <span>Interatividade 3D</span>
+                  <span>NVR em nuvem</span>
+                  <span>Monitoramento com IA</span>
+                  <span>Portal web</span>
                 </div>
               </div>
             </article>
@@ -180,7 +426,7 @@
             <article class="carousel-slide" aria-labelledby="palacete-title">
               <div class="browser-window" aria-label="Mockup do projeto Palacete Pinho">
                 <div class="browser-chrome" aria-hidden="true"><span></span><span></span><span></span></div>
-                <img src="../assets/palacete-browser.png" alt="Website Palacete Pinho com fachada histórica" />
+                <img src="../assets/palacete-browser.webp" alt="Website Palacete Pinho com fachada histórica" />
               </div>
               <div class="project-copy">
                 <h3 id="palacete-title">Palacete Pinho</h3>
@@ -211,7 +457,7 @@
         <div class="orb orb-profile-a"></div>
         <div class="orb orb-profile-b"></div>
         <article class="profile-card">
-          <img class="profile-photo" src="../assets/julia-penna.png" alt="Retrato de Júlia Penna" />
+          <img class="profile-photo" src="../assets/julia-penna.webp" alt="Retrato de Júlia Penna" loading="lazy" />
           <h2 id="profile-title">Júlia Penna</h2>
           <p>
             More projects loading... Tem muita coisa boa vindo por aí. Se quiser saber mais sobre
