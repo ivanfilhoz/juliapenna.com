@@ -885,7 +885,6 @@ a {
     scroll-behavior: auto;
   }
 
-  .orb,
   .carousel-track {
     animation: none;
     transition: none;
